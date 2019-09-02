@@ -45,10 +45,15 @@ class ChatActivity : AppCompatActivity() {
         // set item listener for latest messages recycler view adapter
         adapter.setOnItemClickListener{ item, view ->
             Log.d(TAG, "Success")
+
             val intent = Intent(this, ChatLogActivity::class.java)
             val row = item as LatestMessageRow
-            intent.putExtra(USER_KEY, row.chatPartnerUser)
-            startActivity(intent)
+
+            // check if a message from a user was already on a row or not
+            if (row.chatPartnerUser != null) {
+                intent.putExtra(USER_KEY, row.chatPartnerUser)
+                startActivity(intent)
+            }
         }
     }
 
