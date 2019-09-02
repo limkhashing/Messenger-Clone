@@ -9,5 +9,5 @@ Lack of:
 2. Sorting the messenge based on timestamp
 
 ## Issues
-The code will not work at big scale or in production because it is reading from database a lot of messages with no pagination
-If multiple users are sending messages, reloading the recycler view each time also will be really expensive
+The code will not work at big scale or in production because it is reading from database a lot of messages with no pagination.
+Also, If multiple users are sending messages, reloading the recycler view each time also will be really expensive.
