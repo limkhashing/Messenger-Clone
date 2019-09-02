@@ -14,7 +14,7 @@ The code will not work at big scale or in production because it is reading from 
 Also, If multiple users are sending messages, reloading the recycler view each time also will be really expensive.
 
 This clone made used of 
-* OkHTTP
+* Firebase Auth and Firestore (Instead of Realtime Database)
 * Picasso
 * Circleimageview
 * Groupie
